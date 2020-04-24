@@ -1,12 +1,7 @@
-function postContent() {
-  var content = "\n\ntest";
-  content += "\n\ntest"
-  sendPostContent(content);
-}
-
 function sendPostContent(content) {
-  var token = [NOTIFY_TOKEN];
-  var options = {
+  const NOTIFY_TOKEN = PropertiesService.getScriptProperties().getProperty("NOTIFY_TOKEN");
+  const token = [NOTIFY_TOKEN];
+  const options = {
     "method": "post",
     "payload" : {"message": content },
     "headers": {"Authorization": "Bearer " + token}
