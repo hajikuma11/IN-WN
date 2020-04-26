@@ -1,15 +1,15 @@
 function tweet(text) {
-  var eventName = 'TWEET_OITY'
+  const eventName = 'TWEET_OITY'
   tweetByIfttt(eventName, text);
 }
 function tweetByIfttt(event,text) {
-  var key = 'bIUgfQHumgxri26OiNFGfyxtU6W-e7fumsMXc16bp7X'
-  var url = 'https://maker.ifttt.com/trigger/' + event + '/with/key/' + key
-  var data = {'value1':text};
-  var headers = {
+  const key = TWITTER_KEY;
+  const url = 'https://maker.ifttt.com/trigger/' + event + '/with/key/' + key;
+  const data = {'value1':text};
+  const headers = {
     "Content-Type": "application/json"
   };
-  var options = {
+  const options = {
     'method' : 'post',
     'headers' : headers,
     'payload' : JSON.stringify(data),
