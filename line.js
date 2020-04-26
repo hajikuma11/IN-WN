@@ -1,6 +1,6 @@
 function sendPostContent(content) {
-  const NOTIFY_TOKEN = PropertiesService.getScriptProperties().getProperty("NOTIFY_TOKEN");
-  const token = [LINE_NOTIFY_TOKEN];
+  const NOTIFY_TOKEN = PropertiesService.getScriptProperties().getProperty("LINE_NOTIFY_TOKEN");
+  const token = [NOTIFY_TOKEN];
   const options = {
     "method": "post",
     "payload" : {"message": content },

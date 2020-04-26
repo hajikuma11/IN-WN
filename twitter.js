@@ -3,6 +3,7 @@ function tweet(text) {
   tweetByIfttt(eventName, text);
 }
 function tweetByIfttt(event,text) {
+  const TWITTER_KEY = PropertiesService.getScriptProperties().getProperty("TWITTER_KEY");
   const key = TWITTER_KEY;
   const url = 'https://maker.ifttt.com/trigger/' + event + '/with/key/' + key;
   const data = {'value1':text};
